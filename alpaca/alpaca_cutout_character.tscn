@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfdoxejl8le00"]
+
+[ext_resource type="Animation" path="res://alpaca/animations/setup.tres" id="2"]
+[ext_resource type="Animation" path="res://alpaca/animations/dash.tres" id="3"]
+[ext_resource type="Animation" path="res://alpaca/animations/fall.tres" id="4"]
+[ext_resource type="Animation" path="res://alpaca/animations/idle.tres" id="5"]
+[ext_resource type="Animation" path="res://alpaca/animations/jump.tres" id="6"]
+[ext_resource type="Animation" path="res://alpaca/animations/walk.tres" id="7"]
+[ext_resource type="Texture2D" uid="uid://d1dtfqi1i1alu" path="res://alpaca/alpaca_body_sprites.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bu4r60hxrtb5d" path="res://alpaca/alpaca_face_sprites.png" id="9"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ywbt8"]
+_data = {
+"SETUP": ExtResource("2"),
+"dash": ExtResource("3"),
+"fall": ExtResource("4"),
+"idle": ExtResource("5"),
+"jump": ExtResource("6"),
+"walk": ExtResource("7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee8pm"]
+size = Vector2(192, 199)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhvx4"]
+
+[node name="alpaca_character" type="Marker2D"]
+
+[node name="animator" type="AnimationPlayer" parent="."]
+root_node = NodePath("../sprites")
+libraries = {
+"": SubResource("AnimationLibrary_ywbt8")
+}
+autoplay = "idle"
+playback_default_blend_time = 0.08
+
+[node name="sprites" type="Node2D" parent="."]
+
+[node name="leg_l" type="Sprite2D" parent="sprites"]
+position = Vector2(-12.1423, -43.7746)
+rotation = 0.330454
+texture = ExtResource("8")
+offset = Vector2(0, 19)
+region_enabled = true
+region_rect = Rect2(64, 201, 16, 55)
+
+[node name="leg_r" type="Sprite2D" parent="sprites"]
+position = Vector2(-26.5884, -42.3677)
+rotation = 0.410361
+texture = ExtResource("8")
+offset = Vector2(0, 19)
+region_enabled = true
+region_rect = Rect2(1, 201, 16, 55)
+
+[node name="body" type="Sprite2D" parent="sprites"]
+position = Vector2(-29.3333, -39.2058)
+rotation = 0.0353433
+texture = ExtResource("8")
+offset = Vector2(29.3333, -11.3333)
+region_enabled = true
+region_rect = Rect2(1, 64, 104, 63)
+
+[node name="arm_l" type="Sprite2D" parent="sprites/body"]
+show_behind_parent = true
+position = Vector2(64.6058, -15.8215)
+rotation = -0.38861
+texture = ExtResource("8")
+offset = Vector2(0, 19)
+region_enabled = true
+region_rect = Rect2(64, 201, 16, 55)
+
+[node name="arm_r" type="Sprite2D" parent="sprites/body"]
+show_behind_parent = true
+position = Vector2(45.1673, -7.24025)
+rotation = -0.41097
+texture = ExtResource("8")
+offset = Vector2(0, 19)
+region_enabled = true
+region_rect = Rect2(1, 201, 16, 55)
+
+[node name="neck" type="Sprite2D" parent="sprites/body"]
+position = Vector2(64, -12.6667)
+rotation = 0.0588677
+texture = ExtResource("8")
+offset = Vector2(0, -42.6667)
+region_enabled = true
+region_rect = Rect2(128, 131, 31, 125)
+
+[node name="head" type="Sprite2D" parent="sprites/body/neck"]
+position = Vector2(4.66667, -88.6667)
+rotation = -0.30759
+texture = ExtResource("9")
+offset = Vector2(11.3333, -13.3334)
+region_enabled = true
+region_rect = Rect2(1, 66, 76, 62)
+
+[node name="tail" type="Sprite2D" parent="sprites/body"]
+position = Vector2(-20, -12.6667)
+rotation = -0.129683
+texture = ExtResource("8")
+offset = Vector2(-5.33333, -7.33333)
+region_enabled = true
+region_rect = Rect2(128, 99, 31, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -96.5)
+shape = SubResource("RectangleShape2D_ee8pm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dhvx4")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bicdpspk8s5f3"]
+
+[ext_resource type="PackedScene" uid="uid://ceqp1gflhcj4w" path="res://Policia/policia.tscn" id="1_bf4jw"]
+[ext_resource type="PackedScene" uid="uid://1pyveew72jc5" path="res://environment/floor.tscn" id="2_d53qn"]
+[ext_resource type="Script" path="res://Policia/policia.gd" id="2_lpowo"]
+
+[node name="environment" type="Node2D"]
+
+[node name="Policia" parent="." instance=ExtResource("1_bf4jw")]
+script = ExtResource("2_lpowo")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("2_d53qn")]

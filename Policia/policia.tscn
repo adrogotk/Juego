@@ -1,0 +1,131 @@
+[gd_scene load_steps=25 format=3 uid="uid://ceqp1gflhcj4w"]
+
+[ext_resource type="Texture2D" uid="uid://b2yjjh47atp3n" path="res://Policia/png/1/idle/1_police_Idle_000.png" id="1_qc3ph"]
+[ext_resource type="Texture2D" uid="uid://pednwxps3wsg" path="res://Policia/png/1/idle/1_police_Idle_001.png" id="2_fwwyk"]
+[ext_resource type="Texture2D" uid="uid://huduv0jhonop" path="res://Policia/png/1/idle/1_police_Idle_002.png" id="3_d4v6b"]
+[ext_resource type="Texture2D" uid="uid://c1ofwrg10cpu7" path="res://Policia/png/1/idle/1_police_Idle_003.png" id="4_06aro"]
+[ext_resource type="Texture2D" uid="uid://dg07e3lxxgdb3" path="res://Policia/png/1/idle/1_police_Idle_004.png" id="5_nh6pj"]
+[ext_resource type="Texture2D" uid="uid://dcgci3hjile8s" path="res://Policia/png/1/idle/1_police_Idle_005.png" id="6_0dwrd"]
+[ext_resource type="Texture2D" uid="uid://c31h3xydcxkux" path="res://Policia/png/1/idle/1_police_Idle_006.png" id="7_8ctg5"]
+[ext_resource type="Texture2D" uid="uid://b8l4yfn6a5j5q" path="res://Policia/png/1/idle/1_police_Idle_007.png" id="8_2tarr"]
+[ext_resource type="Texture2D" uid="uid://ct5mc2qpysbsu" path="res://Policia/png/1/jump/1_police_Jump_000.png" id="9_psp0x"]
+[ext_resource type="Texture2D" uid="uid://s0mecqw8hkcs" path="res://Policia/png/1/jump/1_police_Jump_001.png" id="10_8j0pm"]
+[ext_resource type="Texture2D" uid="uid://cgg4e4vn2idfs" path="res://Policia/png/1/jump/1_police_Jump_002.png" id="11_g2ebc"]
+[ext_resource type="Texture2D" uid="uid://c2kq77syouwxh" path="res://Policia/png/1/jump/1_police_Jump_003.png" id="12_lqd2b"]
+[ext_resource type="Texture2D" uid="uid://cspflauj77oku" path="res://Policia/png/1/jump/1_police_Jump_004.png" id="13_wta00"]
+[ext_resource type="Texture2D" uid="uid://cwr6k5gxykh1h" path="res://Policia/png/1/jump/1_police_Jump_005.png" id="14_q7pyg"]
+[ext_resource type="Texture2D" uid="uid://usdgi2ax47e6" path="res://Policia/png/1/jump/1_police_Jump_006.png" id="15_dc286"]
+[ext_resource type="Texture2D" uid="uid://cujqo48k8t2gi" path="res://Policia/png/1/jump/1_police_Jump_007.png" id="16_clth3"]
+[ext_resource type="Texture2D" uid="uid://bxg0tl3ksqci3" path="res://Policia/png/1/run/1_police_Run_000.png" id="17_pwkf7"]
+[ext_resource type="Texture2D" uid="uid://dumg3tgb1jmn3" path="res://Policia/png/1/run/1_police_Run_001.png" id="18_cy67k"]
+[ext_resource type="Texture2D" uid="uid://cmbo5m0jpoxoc" path="res://Policia/png/1/run/1_police_Run_002.png" id="19_x4yrk"]
+[ext_resource type="Texture2D" uid="uid://dkkfyls18ccjp" path="res://Policia/png/1/run/1_police_Run_003.png" id="20_cauqa"]
+[ext_resource type="Texture2D" uid="uid://bwrgyqtuhu5qw" path="res://Policia/png/1/run/1_police_Run_004.png" id="21_n6v3v"]
+[ext_resource type="Texture2D" uid="uid://ctclvfj6hs4ak" path="res://Policia/png/1/run/1_police_Run_005.png" id="22_sttm7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nak35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qc3ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fwwyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d4v6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06aro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nh6pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0dwrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8ctg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2tarr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_psp0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8j0pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g2ebc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lqd2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wta00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q7pyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dc286")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_clth3")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_pwkf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cy67k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x4yrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cauqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_n6v3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sttm7")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd810"]
+size = Vector2(142, 192)
+
+[node name="Policia" type="CharacterBody2D"]
+position = Vector2(-5, 25)
+metadata/_edit_group_ = true
+
+[node name="ani_policia" type="AnimatedSprite2D" parent="."]
+position = Vector2(-22, -68)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_nak35")
+animation = &"run"
+frame = 2
+frame_progress = 0.932275
+metadata/_edit_group_ = true
+
+[node name="col_policia" type="CollisionShape2D" parent="."]
+position = Vector2(-12, -75)
+shape = SubResource("RectangleShape2D_hd810")
+metadata/_edit_group_ = true
+
+[node name="cam_policia" type="Camera2D" parent="."]

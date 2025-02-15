@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://owuhllfehjkj"]
+
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_a2afp"]
+[ext_resource type="AudioStream" uid="uid://cx10oj7kd0qj1" path="res://Menu/King africa - Bomba.mp3" id="1_lwosa"]
+[ext_resource type="Texture2D" uid="uid://bxctlvat35b8f" path="res://Menu/Menu.png" id="2_165mr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a4sdt"]
+font_size = 31
+font_color = Color(1, 0.223529, 0.266667, 1)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a2afp")
+
+[node name="audio_menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_lwosa")
+autoplay = true
+parameters/looping = false
+
+[node name="sprite_menu" type="Sprite2D" parent="."]
+scale = Vector2(1.24086, 1.1406)
+texture = ExtResource("2_165mr")
+centered = false
+
+[node name="vbox_menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 132.0
+offset_right = 209.0
+offset_bottom = 225.0
+
+[node name="lbl_opciones" type="Label" parent="vbox_menu"]
+layout_mode = 2
+text = "Opciones
+"
+
+[node name="btn_start" type="Button" parent="vbox_menu"]
+layout_mode = 2
+text = "Start
+"
+
+[node name="btn_exit" type="Button" parent="vbox_menu"]
+layout_mode = 2
+text = "Exit
+"
+
+[node name="lbl_menu" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 254.0
+offset_bottom = 55.0
+text = "THE EXPLOSIVE GAME"
+label_settings = SubResource("LabelSettings_a4sdt")
+
+[connection signal="pressed" from="vbox_menu/btn_start" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="vbox_menu/btn_exit" to="." method="_on_btn_exit_pressed"]

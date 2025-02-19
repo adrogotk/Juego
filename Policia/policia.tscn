@@ -129,3 +129,7 @@ shape = SubResource("RectangleShape2D_hd810")
 metadata/_edit_group_ = true
 
 [node name="cam_policia" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_bottom = 648
+limit_smoothed = true

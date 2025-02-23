@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://nk61j6nxiwph"]
+
+[ext_resource type="Texture2D" uid="uid://d0ssqoqngiwg1" path="res://bomba/img/Bomba.png" id="1_3yhce"]
+[ext_resource type="Script" path="res://bomba/bomba.gd" id="1_j4agk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fxb8e"]
+
+[node name="bomba" type="Area2D"]
+script = ExtResource("1_j4agk")
+
+[node name="spr_bomba" type="Sprite2D" parent="."]
+scale = Vector2(0.470297, 0.371429)
+texture = ExtResource("1_3yhce")
+
+[node name="col_bomba" type="CollisionShape2D" parent="."]
+scale = Vector2(15.6944, -12.2518)
+shape = SubResource("CircleShape2D_fxb8e")

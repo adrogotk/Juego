@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl4h7ri0qvtel"]
+
+[ext_resource type="Texture2D" uid="uid://dyrjpr6pq4mub" path="res://Coleccionable/img/Gold_1.png" id="1_uiuch"]
+[ext_resource type="Script" path="res://Contador/contador.gd" id="1_xcnqr"]
+
+[node name="Contador" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcnqr")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="lbl_contador" type="Label" parent="HBox"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="HBox"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_uiuch")

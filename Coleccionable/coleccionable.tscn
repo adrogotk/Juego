@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=3 uid="uid://doyxaatuhy1ga"]
+
+[ext_resource type="Script" path="res://Coleccionable/coleccionable.gd" id="1_2flw5"]
+[ext_resource type="Texture2D" uid="uid://dyrjpr6pq4mub" path="res://Coleccionable/img/Gold_1.png" id="2_owfia"]
+[ext_resource type="Texture2D" uid="uid://dumimql0r6gnc" path="res://Coleccionable/img/Gold_2.png" id="3_sgpss"]
+[ext_resource type="Texture2D" uid="uid://dpmjfnh6g6r7f" path="res://Coleccionable/img/Gold_3.png" id="4_ndhro"]
+[ext_resource type="Texture2D" uid="uid://ce3q3w8s01mnn" path="res://Coleccionable/img/Gold_4.png" id="5_hhmkg"]
+[ext_resource type="Texture2D" uid="uid://djjtnhm7y8xp0" path="res://Coleccionable/img/Gold_5.png" id="6_7hae2"]
+[ext_resource type="Texture2D" uid="uid://c1kniisvvunvk" path="res://Coleccionable/img/Gold_6.png" id="7_18ygs"]
+[ext_resource type="Texture2D" uid="uid://b665dh5vg3j53" path="res://Coleccionable/img/Gold_7.png" id="8_46251"]
+[ext_resource type="Texture2D" uid="uid://dxk4jwq2ranio" path="res://Coleccionable/img/Gold_8.png" id="9_khh6h"]
+[ext_resource type="Texture2D" uid="uid://dwkrqqh3u10ik" path="res://Coleccionable/img/Gold_9.png" id="10_odgyu"]
+[ext_resource type="Texture2D" uid="uid://g7djxusvamj2" path="res://Coleccionable/img/Gold_10.png" id="11_6ab00"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p8udp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_owfia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sgpss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ndhro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hhmkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7hae2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_18ygs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_46251")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_khh6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_odgyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6ab00")
+}],
+"loop": true,
+"name": &"giro",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yc0gk"]
+radius = 34.2345
+
+[node name="coleccionable" type="Area2D"]
+scale = Vector2(1, 0.895765)
+script = ExtResource("1_2flw5")
+
+[node name="ani_moneda" type="AnimatedSprite2D" parent="."]
+position = Vector2(437, 311)
+scale = Vector2(0.476139, 0.327106)
+sprite_frames = SubResource("SpriteFrames_p8udp")
+animation = &"giro"
+
+[node name="col_moneda" type="CollisionShape2D" parent="."]
+position = Vector2(437, 311)
+shape = SubResource("CircleShape2D_yc0gk")
+one_way_collision_margin = 0.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx0gvxle4jqx4"]
+
+[ext_resource type="Texture2D" uid="uid://o2sahe0phjqg" path="res://environment/fondo/img/cielo.png" id="1_2es6i"]
+[ext_resource type="Texture2D" uid="uid://bje124bgmm0m2" path="res://environment/medio/img/cordillera.png" id="2_bm7qf"]
+
+[node name="fondo" type="ParallaxBackground"]
+
+[node name="layer_fondo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="spr_fondo" type="Sprite2D" parent="layer_fondo"]
+position = Vector2(9, 1)
+scale = Vector2(3.52218, 34.3095)
+texture = ExtResource("1_2es6i")
+centered = false
+
+[node name="layer_medio" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="spr_medio" type="Sprite2D" parent="layer_medio"]
+position = Vector2(12, 103)
+scale = Vector2(2.01119, 1.84358)
+texture = ExtResource("2_bm7qf")
+centered = false

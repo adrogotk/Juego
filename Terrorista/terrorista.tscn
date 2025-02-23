@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://bws6bi2ouolga"]
+[gd_scene load_steps=27 format=3 uid="uid://bws6bi2ouolga"]
 
+[ext_resource type="Script" path="res://Terrorista/terrorista.gd" id="1_0orkx"]
 [ext_resource type="Texture2D" uid="uid://dh2is13yme6ba" path="res://Terrorista/png/1/idle/1_terrorist_1_Idle_000.png" id="1_3h3i5"]
 [ext_resource type="Texture2D" uid="uid://dxsjtf52qjb77" path="res://Terrorista/png/1/idle/1_terrorist_1_Idle_001.png" id="2_23hon"]
 [ext_resource type="Texture2D" uid="uid://biehoppaxv57b" path="res://Terrorista/png/1/idle/1_terrorist_1_Idle_002.png" id="3_k28ae"]
@@ -110,8 +111,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq8a7"]
 size = Vector2(151.5, 326)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tq5x"]
+size = Vector2(136.339, 436.264)
+
 [node name="terrorista" type="CharacterBody2D"]
 position = Vector2(-11, -1)
+script = ExtResource("1_0orkx")
 metadata/_edit_group_ = true
 
 [node name="ani_terrorista" type="AnimatedSprite2D" parent="."]
@@ -122,3 +127,16 @@ animation = &"run"
 [node name="col_terrorista" type="CollisionShape2D" parent="."]
 position = Vector2(11, -4)
 shape = SubResource("RectangleShape2D_nq8a7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="col_terrorista_ataque" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10.5, -3.5)
+scale = Vector2(0.990178, 0.680781)
+shape = SubResource("RectangleShape2D_6tq5x")
+
+[node name="detector_izquierdo" type="RayCast2D" parent="."]
+scale = Vector2(2.09355, 0.964683)
+target_position = Vector2(-100, 299)
+
+[node name="detector_derecho" type="RayCast2D" parent="."]

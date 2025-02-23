@@ -8,7 +8,13 @@ extends CharacterBody2D
 @export var air_acceleration = 2000
 @export var air_friction = 700
 @onready var ani_policia=$ani_policia
+@onready var contador: Control = $CanvasLayer/Contador
+var monedas: int = 0
 
+func _ready() -> void:
+	add_to_group("jugadores")
+	contador.actualizar(0)
+	
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity+=get_gravity() * delta * gravity_scale
@@ -53,3 +59,12 @@ func _physics_process(delta: float) -> void:
 	update_animation(input_axis)
 	move_and_slide()
 	
+func add_moneda():
+	monedas+=1
+	contador.actualizar(monedas)
+	
+
+func morir():
+	set_physics_process(false)
+	$ani_player.play("muerte")
+	get_tree().change_scene_to_file("res://menu/menu.tscn")

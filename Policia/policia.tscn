@@ -1,14 +1,23 @@
-[gd_scene load_steps=25 format=3 uid="uid://ceqp1gflhcj4w"]
+[gd_scene load_steps=35 format=3 uid="uid://ceqp1gflhcj4w"]
 
+[ext_resource type="Texture2D" uid="uid://dgk82ri72l1hx" path="res://Policia/png/1/hurt/1_police_Hurt_000.png" id="1_ogrnd"]
 [ext_resource type="Texture2D" uid="uid://b2yjjh47atp3n" path="res://Policia/png/1/idle/1_police_Idle_000.png" id="1_qc3ph"]
 [ext_resource type="Texture2D" uid="uid://pednwxps3wsg" path="res://Policia/png/1/idle/1_police_Idle_001.png" id="2_fwwyk"]
+[ext_resource type="Texture2D" uid="uid://bksywx8tms6p0" path="res://Policia/png/1/hurt/1_police_Hurt_001.png" id="2_n0jau"]
+[ext_resource type="Texture2D" uid="uid://4g7msorie807" path="res://Policia/png/1/hurt/1_police_Hurt_002.png" id="3_5dqce"]
 [ext_resource type="Texture2D" uid="uid://huduv0jhonop" path="res://Policia/png/1/idle/1_police_Idle_002.png" id="3_d4v6b"]
 [ext_resource type="Texture2D" uid="uid://c1ofwrg10cpu7" path="res://Policia/png/1/idle/1_police_Idle_003.png" id="4_06aro"]
+[ext_resource type="Texture2D" uid="uid://c43t0x8gyeveb" path="res://Policia/png/1/hurt/1_police_Hurt_003.png" id="4_sndr7"]
 [ext_resource type="Texture2D" uid="uid://dg07e3lxxgdb3" path="res://Policia/png/1/idle/1_police_Idle_004.png" id="5_nh6pj"]
+[ext_resource type="Texture2D" uid="uid://bpf2mqdgeoymn" path="res://Policia/png/1/hurt/1_police_Hurt_004.png" id="5_p7ri1"]
 [ext_resource type="Texture2D" uid="uid://dcgci3hjile8s" path="res://Policia/png/1/idle/1_police_Idle_005.png" id="6_0dwrd"]
+[ext_resource type="Texture2D" uid="uid://b2ap73hmxc76v" path="res://Policia/png/1/hurt/1_police_Hurt_005.png" id="6_4ihfl"]
 [ext_resource type="Texture2D" uid="uid://c31h3xydcxkux" path="res://Policia/png/1/idle/1_police_Idle_006.png" id="7_8ctg5"]
+[ext_resource type="Texture2D" uid="uid://d2wxsh8x48h64" path="res://Policia/png/1/hurt/1_police_Hurt_006.png" id="7_j15xr"]
 [ext_resource type="Texture2D" uid="uid://b8l4yfn6a5j5q" path="res://Policia/png/1/idle/1_police_Idle_007.png" id="8_2tarr"]
+[ext_resource type="Texture2D" uid="uid://cqbvvg1wi1a41" path="res://Policia/png/1/hurt/1_police_Hurt_007.png" id="8_m7yyb"]
 [ext_resource type="Texture2D" uid="uid://ct5mc2qpysbsu" path="res://Policia/png/1/jump/1_police_Jump_000.png" id="9_psp0x"]
+[ext_resource type="Texture2D" uid="uid://cblokn6mswq0c" path="res://Policia/png/1/hurt/1_police_Hurt_008.png" id="9_tygrk"]
 [ext_resource type="Texture2D" uid="uid://s0mecqw8hkcs" path="res://Policia/png/1/jump/1_police_Jump_001.png" id="10_8j0pm"]
 [ext_resource type="Texture2D" uid="uid://cgg4e4vn2idfs" path="res://Policia/png/1/jump/1_police_Jump_002.png" id="11_g2ebc"]
 [ext_resource type="Texture2D" uid="uid://c2kq77syouwxh" path="res://Policia/png/1/jump/1_police_Jump_003.png" id="12_lqd2b"]
@@ -22,9 +31,42 @@
 [ext_resource type="Texture2D" uid="uid://dkkfyls18ccjp" path="res://Policia/png/1/run/1_police_Run_003.png" id="20_cauqa"]
 [ext_resource type="Texture2D" uid="uid://bwrgyqtuhu5qw" path="res://Policia/png/1/run/1_police_Run_004.png" id="21_n6v3v"]
 [ext_resource type="Texture2D" uid="uid://ctclvfj6hs4ak" path="res://Policia/png/1/run/1_police_Run_005.png" id="22_sttm7"]
+[ext_resource type="PackedScene" uid="uid://bl4h7ri0qvtel" path="res://Contador/contador.tscn" id="23_gvrmb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nak35"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ogrnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_n0jau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5dqce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sndr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p7ri1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4ihfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j15xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m7yyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tygrk")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_qc3ph")
@@ -118,9 +160,7 @@ metadata/_edit_group_ = true
 position = Vector2(-22, -68)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_nak35")
-animation = &"run"
-frame = 2
-frame_progress = 0.932275
+animation = &"die"
 metadata/_edit_group_ = true
 
 [node name="col_policia" type="CollisionShape2D" parent="."]
@@ -133,3 +173,7 @@ zoom = Vector2(0.5, 0.5)
 limit_left = 0
 limit_bottom = 648
 limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Contador" parent="CanvasLayer" instance=ExtResource("23_gvrmb")]

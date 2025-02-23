@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://owuhllfehjkj"]
+[gd_scene load_steps=7 format=3 uid="uid://owuhllfehjkj"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_a2afp"]
 [ext_resource type="AudioStream" uid="uid://cx10oj7kd0qj1" path="res://Menu/King africa - Bomba.mp3" id="1_lwosa"]
 [ext_resource type="Texture2D" uid="uid://bxctlvat35b8f" path="res://Menu/Menu.png" id="2_165mr"]
+[ext_resource type="FontFile" uid="uid://e2sqtnyra6p" path="res://Menu/Bolyfat.ttf" id="4_ahkcy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7hy6w"]
+font = ExtResource("4_ahkcy")
+font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_a4sdt"]
 font_size = 31
@@ -38,6 +43,7 @@ offset_bottom = 225.0
 layout_mode = 2
 text = "Opciones
 "
+label_settings = SubResource("LabelSettings_7hy6w")
 
 [node name="btn_start" type="Button" parent="vbox_menu"]
 layout_mode = 2

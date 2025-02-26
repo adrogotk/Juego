@@ -115,7 +115,7 @@ size = Vector2(151.5, 326)
 size = Vector2(136.339, 436.264)
 
 [node name="terrorista" type="CharacterBody2D"]
-position = Vector2(-11, -1)
+position = Vector2(634, 71)
 script = ExtResource("1_0orkx")
 metadata/_edit_group_ = true
 
@@ -137,6 +137,9 @@ shape = SubResource("RectangleShape2D_6tq5x")
 
 [node name="detector_izquierdo" type="RayCast2D" parent="."]
 scale = Vector2(2.09355, 0.964683)
-target_position = Vector2(-100, 299)
+target_position = Vector2(-10.9861, 406.351)
 
 [node name="detector_derecho" type="RayCast2D" parent="."]
+target_position = Vector2(225, 342)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

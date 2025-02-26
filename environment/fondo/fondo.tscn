@@ -10,8 +10,8 @@ motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="spr_fondo" type="Sprite2D" parent="layer_fondo"]
-position = Vector2(9, 1)
-scale = Vector2(3.52218, 34.3095)
+position = Vector2(1, -123)
+scale = Vector2(3.52218, 34.7015)
 texture = ExtResource("1_2es6i")
 centered = false
 
@@ -20,7 +20,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="spr_medio" type="Sprite2D" parent="layer_medio"]
-position = Vector2(12, 103)
-scale = Vector2(2.01119, 1.84358)
+position = Vector2(20, 613)
+scale = Vector2(2.03125, 1.87963)
 texture = ExtResource("2_bm7qf")
 centered = false

@@ -10,7 +10,7 @@ const JUMP_VELOCITY = -400.0
 var sentido = 1
 
 func _ready() -> void:
-	$ani_ene_dyn.play("default") 
+	$ani_terrorista.play("idle") 
 	
 	
 func _physics_process(delta: float) -> void:
@@ -20,17 +20,19 @@ func _physics_process(delta: float) -> void:
 
 	if sentido ==1 && $detector_derecho.is_colliding():
 		velocity.x = speed
-		$ani_ene_dyn.flip_h = false
+		$ani_terrorista.flip_h = false
 	else:
 		sentido = -1
 	
 	if sentido == -1 && $detector_izquierdo.is_colliding():
 		velocity.x = -speed
-		$ani_ene_dyn.flip_h = true
+		$ani_terrorista.flip_h = true
 	else:
 		sentido = 1
 	move_and_slide()
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("jugadores"):
-		body.morir()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+		if body.is_in_group("jugadores"):
+			body.morir()

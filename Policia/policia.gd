@@ -62,6 +62,7 @@ func _physics_process(delta: float) -> void:
 func add_moneda():
 	monedas+=1
 	contador.actualizar(monedas)
+	get_tree().reload_current_scene()
 	
 
 func morir():

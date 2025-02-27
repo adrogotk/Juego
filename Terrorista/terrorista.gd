@@ -18,13 +18,13 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		sentido = -sentido
 
-	if sentido ==1 && $detector_derecho.is_colliding():
+	if sentido ==1 && $detector_izquierdo.is_colliding():
 		velocity.x = speed
 		$ani_terrorista.flip_h = false
 	else:
 		sentido = -1
 	
-	if sentido == -1 && $detector_izquierdo.is_colliding():
+	if sentido == -1 && $detector_derecho.is_colliding():
 		velocity.x = -speed
 		$ani_terrorista.flip_h = true
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bws6bi2ouolga"]
+[gd_scene load_steps=28 format=3 uid="uid://bws6bi2ouolga"]
 
 [ext_resource type="Script" path="res://Terrorista/terrorista.gd" id="1_0orkx"]
 [ext_resource type="Texture2D" uid="uid://dh2is13yme6ba" path="res://Terrorista/png/1/idle/1_terrorist_1_Idle_000.png" id="1_3h3i5"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bn0ii83r00ua0" path="res://Terrorista/png/1/run/1_terrorist_1_Run_003.png" id="20_7tp2i"]
 [ext_resource type="Texture2D" uid="uid://cj5osfeecmwtn" path="res://Terrorista/png/1/run/1_terrorist_1_Run_004.png" id="21_0gfle"]
 [ext_resource type="Texture2D" uid="uid://b2vqi8uiekyr" path="res://Terrorista/png/1/run/1_terrorist_1_Run_005.png" id="22_v5qvu"]
+[ext_resource type="Script" path="res://Terrorista/detector_izquierdo.gd" id="24_o6o24"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mpnrw"]
 animations = [{
@@ -109,37 +110,41 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq8a7"]
-size = Vector2(151.5, 326)
+size = Vector2(35, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tq5x"]
-size = Vector2(136.339, 436.264)
+size = Vector2(38.3769, 84.4618)
 
 [node name="terrorista" type="CharacterBody2D"]
-position = Vector2(634, 71)
+position = Vector2(505, 150)
 script = ExtResource("1_0orkx")
-metadata/_edit_group_ = true
 
 [node name="ani_terrorista" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
+position = Vector2(-13.4062, -144.281)
+scale = Vector2(0.082337, 0.0484981)
 sprite_frames = SubResource("SpriteFrames_mpnrw")
 animation = &"run"
 
 [node name="col_terrorista" type="CollisionShape2D" parent="."]
-position = Vector2(11, -4)
+position = Vector2(-6.5, -143.5)
 shape = SubResource("RectangleShape2D_nq8a7")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(10, -72)
 
 [node name="col_terrorista_ataque" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(10.5, -3.5)
+position = Vector2(-16, -72)
 scale = Vector2(0.990178, 0.680781)
 shape = SubResource("RectangleShape2D_6tq5x")
 
 [node name="detector_izquierdo" type="RayCast2D" parent="."]
+position = Vector2(-33, -118)
 scale = Vector2(2.09355, 0.964683)
-target_position = Vector2(-10.9861, 406.351)
+target_position = Vector2(-254.591, -2.07322)
+script = ExtResource("24_o6o24")
 
 [node name="detector_derecho" type="RayCast2D" parent="."]
-target_position = Vector2(225, 342)
+position = Vector2(14, -119)
+target_position = Vector2(222, -2)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

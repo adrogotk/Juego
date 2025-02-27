@@ -9,7 +9,6 @@ extends CharacterBody2D
 @export var air_friction = 700
 @onready var ani_policia=$ani_policia
 @onready var contador: Control = $CanvasLayer/Contador
-var monedas: int = 0
 
 func _ready() -> void:
 	add_to_group("jugadores")
@@ -60,12 +59,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func add_moneda():
-	monedas+=1
-	contador.actualizar(monedas)
 	get_tree().reload_current_scene()
+	Global.contador+=1
+	contador.actualizar(Global.contador)
 	
 
 func morir():
 	set_physics_process(false)
-	$ani_player.play("muerte")
+	$ani_policia.play("die")
+	$tiempo.start()
+	await $tiempo.timeout
 	get_tree().change_scene_to_file("res://menu/menu.tscn")

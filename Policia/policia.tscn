@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://ceqp1gflhcj4w"]
+[gd_scene load_steps=36 format=3 uid="uid://ceqp1gflhcj4w"]
 
 [ext_resource type="Texture2D" uid="uid://dgk82ri72l1hx" path="res://Policia/png/1/hurt/1_police_Hurt_000.png" id="1_ogrnd"]
 [ext_resource type="Texture2D" uid="uid://b2yjjh47atp3n" path="res://Policia/png/1/idle/1_police_Idle_000.png" id="1_qc3ph"]
+[ext_resource type="Script" path="res://Policia/policia.gd" id="1_sj6h5"]
 [ext_resource type="Texture2D" uid="uid://pednwxps3wsg" path="res://Policia/png/1/idle/1_police_Idle_001.png" id="2_fwwyk"]
 [ext_resource type="Texture2D" uid="uid://bksywx8tms6p0" path="res://Policia/png/1/hurt/1_police_Hurt_001.png" id="2_n0jau"]
 [ext_resource type="Texture2D" uid="uid://4g7msorie807" path="res://Policia/png/1/hurt/1_police_Hurt_002.png" id="3_5dqce"]
@@ -153,7 +154,8 @@ animations = [{
 size = Vector2(142, 192)
 
 [node name="Policia" type="CharacterBody2D"]
-position = Vector2(-5, 25)
+position = Vector2(-10, 34)
+script = ExtResource("1_sj6h5")
 metadata/_edit_group_ = true
 
 [node name="ani_policia" type="AnimatedSprite2D" parent="."]
@@ -177,3 +179,6 @@ limit_smoothed = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Contador" parent="CanvasLayer" instance=ExtResource("23_gvrmb")]
+
+[node name="tiempo" type="Timer" parent="."]
+wait_time = 1.5

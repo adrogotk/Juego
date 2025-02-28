@@ -59,9 +59,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func add_moneda():
-	get_tree().reload_current_scene()
 	Global.contador+=1
-	contador.actualizar(Global.contador)
+	print(Global.contador)
+	get_tree().reload_current_scene()
 	
 
 func morir():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bws6bi2ouolga"]
+[gd_scene load_steps=27 format=3 uid="uid://bws6bi2ouolga"]
 
 [ext_resource type="Script" path="res://Terrorista/terrorista.gd" id="1_0orkx"]
 [ext_resource type="Texture2D" uid="uid://dh2is13yme6ba" path="res://Terrorista/png/1/idle/1_terrorist_1_Idle_000.png" id="1_3h3i5"]
@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://bn0ii83r00ua0" path="res://Terrorista/png/1/run/1_terrorist_1_Run_003.png" id="20_7tp2i"]
 [ext_resource type="Texture2D" uid="uid://cj5osfeecmwtn" path="res://Terrorista/png/1/run/1_terrorist_1_Run_004.png" id="21_0gfle"]
 [ext_resource type="Texture2D" uid="uid://b2vqi8uiekyr" path="res://Terrorista/png/1/run/1_terrorist_1_Run_005.png" id="22_v5qvu"]
-[ext_resource type="Script" path="res://Terrorista/detector_izquierdo.gd" id="24_o6o24"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mpnrw"]
 animations = [{
@@ -141,7 +140,6 @@ shape = SubResource("RectangleShape2D_6tq5x")
 position = Vector2(-33, -118)
 scale = Vector2(2.09355, 0.964683)
 target_position = Vector2(-254.591, -2.07322)
-script = ExtResource("24_o6o24")
 
 [node name="detector_derecho" type="RayCast2D" parent="."]
 position = Vector2(14, -119)

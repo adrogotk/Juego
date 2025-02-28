@@ -1,4 +1,4 @@
-![1_terrorist_1_Run_005](https://github.com/user-attachments/assets/081f10b1-fe30-4e15-9f10-10dd301b12e1)# Juego
+# Juego
 
 ## Conceptualizacion
 ![Conceptualizacion](https://github.com/user-attachments/assets/ef7a01ae-e368-4303-9531-365e8abae40a)
